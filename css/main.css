@@ -57,6 +57,10 @@ main > .container {
   text-align: center;
 }
 
+.dice-side > span{
+	margin: auto auto;
+}
+
 .face-one{
 	line-height: 150px;
 	background: rgba(0, 0, 255,0.8); 
