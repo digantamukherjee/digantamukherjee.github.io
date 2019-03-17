@@ -57,37 +57,33 @@ main > .container {
   text-align: center;
 }
 
-.center-align{
-	vertical-align: middle;
-	text-align: center;
-}
 .face-one{
 	line-height: 150px;
-	background: rgba(255,250,205,1); 
+	background: rgba(0, 0, 255,0.8); 
 	transform: rotateY(  0deg) translateZ(100px); 
 }
 .face-two{
 	line-height: 150px;
-	background: rgba(255,250,205,1); ; 
+	background: rgba(0,255,0,0.8); ; 
 	transform: rotateY(180deg) translateZ(100px); 
 }
 .face-three{
 	line-height: 150px;
-	background: rgba(255,250,205,1); ; 
+	background: rgba(255,0,0,0.8); ; 
 	transform: rotateY(-90deg) translateZ(100px); 
 }
 .face-four{
 	line-height: 60px;
-	background: rgba(255,250,205,1); 
+	background: rgba(255,255,0,0.8); 
 	transform: rotateY( 90deg) translateZ(100px);
 }
 .face-five{
 	line-height: 50px;
-	background: rgba(255,250,205,1); ; 
+	background: rgba(0,255,255,0.8); ; 
 	transform: rotateX( 90deg) translateZ(100px); 
 }
 .face-six{
 	line-height: 60px;
-	background: rgba(255,250,205,1); ; 
+	background: rgba(255,0,255,0.8); ; 
 	transform: rotateX(-90deg) translateZ(100px); 
 }
