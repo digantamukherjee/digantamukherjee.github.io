@@ -11,10 +11,83 @@ main > .container {
   padding-left: 15px;
 }
 
-code {
-  font-size: 80%;
-}
-
 .bg-nav{
 	background-color: #A02422;
+}
+.clearHeader{
+	width: 100%;
+}
+
+.dice-outer-wrapper{
+  height: 200px;
+  margin: 100px 0;
+  perspective: 300px;
+  border: none;
+}
+
+.dice-inner-wrapper {
+  margin: 0 auto;
+}
+
+.dice {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.dice-animator {
+  animation: anim 10s infinite ease-in-out;
+}
+
+@keyframes anim {
+     0%   { transform: translateZ(-100px) rotateX(  0deg) rotateY(  0deg) rotateZ(  0deg); }
+     100% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateY(  360deg); }
+}
+
+.dice-side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  font-size: 100px;
+  font-weight: bold;
+  color: black;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.center-align{
+	vertical-align: middle;
+	text-align: center;
+}
+.face-one{
+	line-height: 150px;
+	background: rgba(255,250,205,1); 
+	transform: rotateY(  0deg) translateZ(100px); 
+}
+.face-two{
+	line-height: 150px;
+	background: rgba(255,250,205,1); ; 
+	transform: rotateY(180deg) translateZ(100px); 
+}
+.face-three{
+	line-height: 150px;
+	background: rgba(255,250,205,1); ; 
+	transform: rotateY(-90deg) translateZ(100px); 
+}
+.face-four{
+	line-height: 60px;
+	background: rgba(255,250,205,1); 
+	transform: rotateY( 90deg) translateZ(100px);
+}
+.face-five{
+	line-height: 50px;
+	background: rgba(255,250,205,1); ; 
+	transform: rotateX( 90deg) translateZ(100px); 
+}
+.face-six{
+	line-height: 60px;
+	background: rgba(255,250,205,1); ; 
+	transform: rotateX(-90deg) translateZ(100px); 
 }
