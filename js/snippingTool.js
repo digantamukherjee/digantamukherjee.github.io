@@ -19,9 +19,9 @@ var currentSnapshot;
 $(document).ready(function(e){
 	var img = new Image();
 	img.onload = function(){
-		myCanvas.width = 300;
-		myCanvas.height = 300;
-		myContext.drawImage(img, 0, 0, 300, 300);
+		myCanvas.width = 200;
+		myCanvas.height = 200;
+		myContext.drawImage(img, 0, 0, 200, 200);
 	}
 	img.src = "../images/testImage.png";
 });
@@ -66,8 +66,6 @@ myCanvas.addEventListener("mousedown", function(e){
 		if (element !== null && isSelecting) {
 	        element.style.width = Math.abs(ev.clientX - mouseInitPos.mouseStartX) + 'px';
 	        element.style.height = Math.abs(ev.clientY - mouseInitPos.mouseStartY) + 'px';
-	        console.log("element.style.width:"+element.style.width);
-	        console.log("element.style.height:"+element.style.height);
 	        mouseInitPos.divWidth = Math.abs(ev.clientX - mouseInitPos.mouseStartX) ;
 	        mouseInitPos.divHeight = Math.abs(ev.clientY - mouseInitPos.mouseStartY)
 	        element.style.left = (ev.clientX - mouseInitPos.mouseStartX < 0) ? ev.clientX + 'px' : mouseInitPos.mouseStartX + 'px';
@@ -113,8 +111,6 @@ myCanvas.addEventListener("mousedown", function(e){
 			if (element !== null && isSelecting) {
 		        element.style.width = Math.abs(ev.clientX - mouseInitPos.mouseStartX) + 'px';
 		        element.style.height = Math.abs(ev.clientY - mouseInitPos.mouseStartY) + 'px';
-		        console.log("element.style.width:"+element.style.width);
-		        console.log("element.style.height:"+element.style.height);
 		        mouseInitPos.divWidth = Math.abs(ev.clientX - mouseInitPos.mouseStartX) ;
 		        mouseInitPos.divHeight = Math.abs(ev.clientY - mouseInitPos.mouseStartY)
 		        element.style.left = (ev.clientX - mouseInitPos.mouseStartX < 0) ? ev.clientX + 'px' : mouseInitPos.mouseStartX + 'px';
