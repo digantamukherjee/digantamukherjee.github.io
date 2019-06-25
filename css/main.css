@@ -91,3 +91,31 @@ main > .container {
 	background: rgba(255,0,255,0.8); ; 
 	transform: rotateX(-90deg) translateZ(100px); 
 }
+
+#pdf_canvas_container {
+width: 800px;
+height: 400px;
+overflow: auto;
+background: #333;
+text-align: center;
+border: solid 3px;
+}
+
+.rectangle {
+    border: 1px solid #FFFF00;
+    position: fixed;
+    background-color: rgba(9,3,9,0.3);
+    z-index: 2;
+}
+#snapshot_overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.snapshot_format{
+  border: 2px #000 solid;
+  width: 100%;
+}

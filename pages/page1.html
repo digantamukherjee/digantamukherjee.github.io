@@ -15,14 +15,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/page1.html">JS PDF rendering <span class="sr-only"></span></a>
+            <a class="nav-link" href="../index.html">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">JS PDF rendering <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/page2.html">Javascript Snipping Tool<span class="sr-only"></span></a>
+            <a class="nav-link" href="page2.html">Javascript Snipping Tool<span class="sr-only"></span></a>
           </li>
         </ul>
       </div>
@@ -31,16 +31,31 @@
   <div class="clearHeader"></div>
   <!-- Begin page content -->
   <main class="container h-100">
-    <div class="dice-outer-wrapper">
-        <div class="dice dice-inner-wrapper dice-animator">
-          <div class="dice-side face-one"><span class="align-middle">&#x2022</span></div>
-          <div class="dice-side face-two"><span class="align-middle">&#x2022 &#x2022</span></div>
-          <div class="dice-side face-three"><span class="align-middle">&#x2022 &#x2022 &#x2022</span></div>
-          <div class="dice-side face-four"><span class="align-middle">&#x2022 &#x2022<br>&#x2022 &#x2022</span></div>
-          <div class="dice-side face-five"><span class="align-middle">&#x2022 &#x2022<br> &#x2022<br>&#x2022 &#x2022</span></div>
-          <div class="dice-side face-six"><span class="align-middle">&#x2022 &#x2022 &#x2022<br>&#x2022 &#x2022 &#x2022</span></div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1>PDF rendered in HTML</h1>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 d-inline">
+            <input id="pdf_file_selector" type="file" name="pdf_file_selector" class="form-control">
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 d-inline">
+            <div id="pdf_navigation_controls" class="d-inline">
+                <button id="navigate_to_previous_page" class="btn btn-primary">Previous</button>
+                <input id="focused_page_index" value="1" type="number">
+                <button id="navigate_to_next_page" class="btn btn-primary">Next</button>
+            </div>
+            <div id="zoom_controls" class="d-inline">
+                <button id="zoom_in" class="btn btn-primary">+</button>
+                <button id="zoom_out" class="btn btn-primary">-</button>
+            </div>
+          </div>
+        </div>
+        <div id="pdf_viewer" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div id="pdf_canvas_container">
+            <canvas id="pdf_renderer"></canvas>
+          </div>
         </div>
       </div>
+    </div>
   </main>
   <!-- sticky footer -->
   <footer class="footer mt-auto py-3">
@@ -48,13 +63,15 @@
       <span class="text-muted">Powered by <a href="https://github.com/">GitHub</a></span>
     </div>
   </footer>
-  <link href="css/main.css" rel="stylesheet"/>
+  <link href="../css/main.css" rel="stylesheet"/>
   <!-- Vendor libs -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="js/main.js" type="text/javascript"></script>
-  <script src="js/diceRenderer.js" type="text/javascript"></script>
+  <script src="../js/main.js" type="text/javascript"></script>
+  <script src="../js/pdfRenderer.js" type="text/javascript"></script>
+  <script type="text/javascript" src="../js/pdf.worker.min.js"></script>
+  <script type="text/javascript" src="../js/pdf.min.js"></script>
 </body>
 </html>
